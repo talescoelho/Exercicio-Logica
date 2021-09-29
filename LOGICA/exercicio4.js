@@ -1,6 +1,6 @@
 const mercado = require('./mercado');
 
-// escreva a função frutaPredominante retornar um objeto com o nome da fruta; 
+// escreva a função frutaPredominante para retornar um objeto com o nome da fruta; 
 function frutaPredominante() {
   
 }
