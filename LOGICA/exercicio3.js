@@ -1,6 +1,6 @@
 const mercado = require('./mercado');
 
-// escreva a função maisCara para retornar os dados da fruta mais cara;
+// complete a função maisCara para retornar os dados da fruta com o maior preço;
 function maisCara() {
   
 }

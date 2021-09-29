@@ -1,6 +1,7 @@
-const mercado = require('./mercado');
+const mercado = require("./mercado");
 
-// escreva a função diaDesconto recebe o dia da semana ("seg", "ter", etc..) e retorna uma lista com o nome das frutas que estão com desconto neste dia;
+// complete a função diaDesconto, que ao receber o dia da semana ("seg", "ter", etc..),
+// retorna uma lista com o nome das frutas que estão com desconto neste dia;
 function diaDescontos() {
   
 }

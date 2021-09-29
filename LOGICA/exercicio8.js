@@ -1,6 +1,7 @@
 const mercado = require('./mercado');
 
-// escreva a função buscaValorNutritivo recebe o valor nutritivo como parametro e retorna um array com o nome de todas as frutas que tem esse valor nutritivo
+// complete a função buscaValorNutritivo, que ao receber um valor nutritivo como parametro,
+// retorna um array com o nome de todas as frutas que possui esse valor nutritivo
 function buscaValorNutritivo() {
   
 }

@@ -1,6 +1,7 @@
-const mercado = require('./mercado');
+const mercado = require("./mercado");
 
-// escreva a função buscaPorPredominante recebe o mes como valor e retorna uma lista com todos os nomes das frutas que esse mês aparece no campo predominante
+// complete a função buscaPorPredominante, que ao receber o mes como valor,
+// retorna uma lista com todos os nomes das frutas que esse mês aparece no campo predominante
 function buscaPorMesPredominante() {
   
 }
