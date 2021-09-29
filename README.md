@@ -6,4 +6,4 @@
 
 - utilize o comando `npm install` para instalar as dependências
 
--- utilize o comando `npm test` para rodar os testes
+- utilize o comando `npm test` para rodar os testes
