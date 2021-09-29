@@ -2,7 +2,7 @@ const nomeFrutas = require('../exercicio1');
 const vitaminaC = require('../exercicio2');
 const maisCara = require('../exercicio3');
 const frutaPredominante = require('../exercicio4');
-const diaDesconto = require('../exercicio5');
+const diaDescontos = require('../exercicio5');
 
 describe("Exercício 1 Função nomeFrutas()", () => {
   it("verifica se a função nomeFrutas retorna um array com o nome das frutas", () => {
@@ -44,9 +44,10 @@ describe("Exercício 4 Função frutaPredominante()", () => {
   });
 });
 
-describe("Exercício 5 Função diaDesconto()", () => {
-  it("verifica se a função diaDesconto retorna uma lista com o nome das frutas que estão com desconto no dia", () => {
-    expect(diaDesconto("seg")).toEqual(["Maracujá", "Laranja", "Maçã"]);
-    expect(diaDesconto("ter")).toEqual(["Manga", "Banana", "Limão"]);
+describe("Exercício 5 Função diaDescontos()", () => {
+  it("verifica se a função diaDescontos retorna uma lista com o nome das frutas que estão com desconto no dia", () => {
+    expect(diaDescontos("seg")).toEqual(["Maracujá", "Laranja", "Maçã"]);
+    expect(diaDescontos("ter")).toEqual(["Manga", "Banana", "Limão"]);
+    expect(diaDescontos("ter")).toEqual(["Laranja", "Mamão", "Maçã"]);
   });
 });
