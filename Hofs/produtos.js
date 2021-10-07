@@ -271,7 +271,7 @@ const produtos = {
       id: "H008",
       name: "Fone Headset 5.0 Com Led Dobrável",
       brand: null,
-      color: ["white  "],
+      color: ["white"],
       bluetooth: true,
       stores: ["Mercado Livre", "Submarino", "Kalunga"],
       prices: [109.90, 99.99, 108.40],
