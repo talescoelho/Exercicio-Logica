@@ -1,6 +1,7 @@
 const verifyStore = require('../exercicio5');
 const verifyId = require('../exercicio6');
 const findColor = require('../exercicio7');
+const averagePrice = require('../exercicio8');
 
 describe("Exercício 5 Função verifyStore", () => {
   it("verifica se a função verifyStore('KaBuM!', 'keyboards') retorna um array com o nome de todos os teclados da Kabum!", () => {
@@ -106,5 +107,17 @@ describe("Exercício 7 Função findColor", () => {
       },
       { name: 'Headset M2 Cat 2021', lowerstPrice: 150.45 }
     ]);
+  });
+});
+
+describe("Exercício 8 Função averagePrice", () => {
+  it("verifica se a função averagePrice('H010') retorna um objetos os itens que contenham o id informado", () => {
+    expect(averagePrice("H010")).toEqual({ name: 'Headset M2 Cat 2021', averagePrice: 166.8 });
+  });
+  it("verifica se a função averagePrice('K007') retorna um objetos os itens que contenham o id informado", () => {
+    expect(averagePrice("K007")).toEqual({ name: 'Teclado Mecanico T-Dagger Bermudo', averagePrice: 217.33 });
+  });
+  it("verifica se a função averagePrice('K011') retorna um objetos os itens que contenham o id informado", () => {
+    expect(averagePrice("K011")).toBe("id não encontrado");
   });
 });
