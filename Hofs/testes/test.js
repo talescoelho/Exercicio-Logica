@@ -6,6 +6,7 @@ const verifyStore = require('../exercicio5');
 const verifyId = require('../exercicio6');
 const findColor = require('../exercicio7');
 const averagePrice = require('../exercicio8');
+const createStore = require('../exercicio9');
 
 describe("Exercício 1 Função getAllProductsFromStore", () => {
   it("verifica se a função getAllProductsFromStore('Americanas') retorna array com os produtos da loja Americanas", () => {
@@ -237,5 +238,227 @@ describe("Exercício 8 Função averagePrice", () => {
   });
   it("verifica se a função averagePrice('K011') retorna um objetos os itens que contenham o id informado", () => {
     expect(averagePrice("K011")).toBe("id não encontrado");
+  });
+});
+
+const objTeste = {
+  'KaBuM!': {
+    mouses: [
+      'Mouse Gamer Cobra Chroma M711 Rgb Redragon',
+      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Gamer 3200dpi MO273-Multilaser',
+      'Mouse Logitech Mx Master 3'
+    ],
+    keyboards: [
+      'Teclado Logitech K120, ABNT2',
+      'Teclado Mecanico Pichau P531 RGB',
+      'Teclado Mecanico Pichau P531 RGB',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Mecanico Gamer Redragon Daska, Rainbow',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Gamer Trust GXT 835 Azor',
+      'Teclado Gamer Multilaser Multimidia USB PRETO/VERDE'
+    ],
+    headsets: [
+      'Headset Gamer Hyperx Cloud Stinger Core',
+      'Headset Gamer Scylla Redragon H901',
+      'Fone de Ouvido Gamer Headset Multilaser PH073'
+    ],
+    graphicsCard: [
+      'Placa De Video MSI GEFORCE RTX 3080 VENTUS 3X OC Edition',
+      'Placa De Video MANCER RADEON RX 560',
+      'Placa De Video ASUS GEFORCE RTX 3080 ROG STRIX WHITE Edition OC',
+      'Placa De Video ASROCK RADEON RX 6800',
+      'Placa De Video PNY GEFORCE GTX 970'
+    ]
+  },
+  Terabyteshop: {
+    mouses: [
+      'Mouse Gamer Cobra Chroma M711 Rgb Redragon',
+      'Mouse Gamer Logitech G203 Rgb Lightsync'
+    ],
+    keyboards: [],
+    headsets: [
+      'Headset Gamer Hyperx Cloud Stinger Core',
+      'Headset Gamer Scylla Redragon H901',
+      'Headset Headband 3.5 mm Wired'
+    ],
+    graphicsCard: []
+  },
+  Pichau: {
+    mouses: [
+      'Mouse Gamer Cobra Chroma M711 Rgb Redragon',
+      'Mouse Logitech Mx Master 3'
+    ],
+    keyboards: [
+      'Teclado Mecanico Pichau P531 RGB',
+      'Teclado Mecanico Pichau P531 RGB',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Mecanico Gamer Redragon Daska, Rainbow',
+      'Teclado Opto-Mecanico Redragon Infernal Dragon Viserion',
+      'Teclado Mecanico T-Dagger Bermudo',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Gamer Trust GXT 835 Azor',
+      'Teclado Gamer Multilaser Multimidia USB PRETO/VERDE'
+    ],
+    headsets: [
+      'Headset Gamer Scylla Redragon H901',
+      'Fone de Ouvido Headset Gamer Blaze TGT-BLA-01'
+    ],
+    graphicsCard: [
+      'Placa De Video MSI GEFORCE RTX 3080 VENTUS 3X OC Edition',
+      'Placa De Video ASUS RADEON RX 6700 XT DUAL OC Edition',
+      'Placa De Video MANCER RADEON RX 560',
+      'Placa De Video GIGABYTE GEFORCE RTX 2060 D6',
+      'Placa De Video ASUS GEFORCE RTX 3080 ROG STRIX WHITE Edition OC',
+      'Placa De Video AFOX RADEON R5 230',
+      'Placa De Video ZOTAC GEFORCE GTX 1660 SUPER',
+      'Placa De Video ASROCK RADEON RX 6700 XT CHALLENGER',
+      'Placa De Video ASROCK RADEON RX 6800',
+      'Placa De Video PNY GEFORCE GTX 970'
+    ]
+  },
+  Kalunga: {
+    mouses: [
+      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Logitech M170',
+      'Mouse Gamer 3200dpi MO273-Multilaser'
+    ],
+    keyboards: [],
+    headsets: [
+      'Fone de Ouvido Gamer Headset Multilaser PH073',
+      'Fone de Ouvido Headset Gamer Blaze TGT-BLA-01',
+      'Fone Headset 5.0 Com Led Dobrável',
+      'Fone De Ouvido Headset Surround Bass Bluetooth',
+      'Headset M2 Cat 2021'
+    ],
+    graphicsCard: []
+  },
+  Shopee: {
+    mouses: [
+      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Logitech M170'
+    ],
+    keyboards: [],
+    headsets: [],
+    graphicsCard: []
+  },
+  'Kabum!': {
+    mouses: [ 'Mouse Logitech M170' ],
+    keyboards: [],
+    headsets: [],
+    graphicsCard: []
+  },
+  'Loja Multilaser': {
+    mouses: [ 'Mouse Gamer 3200dpi MO273-Multilaser' ],
+    keyboards: [],
+    headsets: [],
+    graphicsCard: []
+  },
+  'Mercado Livre': {
+    mouses: [ 'Mouse Gamer Rgb Gt-m3 Lehmox', 'Mouse Logitech Mx Master 3' ],
+    keyboards: [],
+    headsets: [
+      'Headset Gamer Hyperx Cloud Stinger Core',
+      'Fone de Ouvido Gamer Headset Multilaser PH073',
+      'Headphone Microfone Gm-019',
+      'Fone Ouvido Sem Fio Bluetooth Lc-840',
+      'Fone Headset 5.0 Com Led Dobrável',
+      'Fone De Ouvido Headset Surround Bass Bluetooth'
+    ],
+    graphicsCard: []
+  },
+  'Magazine Luiza': {
+    mouses: [ 'Mouse Gamer Rgb Gt-m3 Lehmox', 'Mouse Gamer K-Mex' ],
+    keyboards: [ 'Teclado Mecanico Gamer Redragon Daska, Rainbow' ],
+    headsets: [
+      'Fone de Ouvido Headset Gamer Blaze TGT-BLA-01',
+      'Fone Ouvido Sem Fio Bluetooth Lc-840'
+    ],
+    graphicsCard: []
+  },
+  Submarino: {
+    mouses: [
+      'Mouse Gamer Rgb Gt-m3 Lehmox',
+      'Mouse Gamer K-Mex',
+      'Mouse Jogo Notebook Pc Gamer',
+      'Mouse Multilaser MO221'
+    ],
+    keyboards: [
+      'Teclado Logitech K120, ABNT2',
+      'Teclado Mecanico Pichau P531 RGB',
+      'Teclado Mecanico Pichau P531 RGB',
+      'Teclado Opto-Mecanico Redragon Infernal Dragon Viserion',
+      'Teclado Mecanico T-Dagger Bermudo',
+      'Teclado Gamer Multilaser Multimidia USB PRETO/VERDE'
+    ],
+    headsets: [
+      'Headphone Microfone Gm-019',
+      'Fone Headset 5.0 Com Led Dobrável',
+      'Fone De Ouvido Headset Surround Bass Bluetooth',
+      'Headset M2 Cat 2021'
+    ],
+    graphicsCard: [
+      'Placa De Video ASUS RADEON RX 6700 XT DUAL OC Edition',
+      'Placa De Video MANCER RADEON RX 560',
+      'Placa De Video GIGABYTE GEFORCE RTX 2060 D6',
+      'Placa De Video AFOX RADEON R5 230',
+      'Placa De Video ZOTAC GEFORCE GTX 1660 SUPER',
+      'Placa De Video ASROCK RADEON RX 6700 XT CHALLENGER',
+      'Placa De Video PNY GEFORCE GTX 970'
+    ]
+  },
+  'Casas Bahia': {
+    mouses: [ 'Mouse Gamer K-Mex' ],
+    keyboards: [],
+    headsets: [],
+    graphicsCard: []
+  },
+  Americanas: {
+    mouses: [ 'Mouse Jogo Notebook Pc Gamer', 'Mouse Multilaser MO221' ],
+    keyboards: [
+      'Teclado Logitech K120, ABNT2',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Opto-Mecanico Redragon Infernal Dragon Viserion',
+      'Teclado Mecanico T-Dagger Bermudo',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Gamer Trust GXT 835 Azor'
+    ],
+    headsets: [
+      'Headset Headband 3.5 mm Wired',
+      'Headphone Microfone Gm-019',
+      'Fone Ouvido Sem Fio Bluetooth Lc-840',
+      'Headset M2 Cat 2021'
+    ],
+    graphicsCard: [
+      'Placa De Video MSI GEFORCE RTX 3080 VENTUS 3X OC Edition',
+      'Placa De Video ASUS RADEON RX 6700 XT DUAL OC Edition',
+      'Placa De Video GIGABYTE GEFORCE RTX 2060 D6',
+      'Placa De Video ASUS GEFORCE RTX 3080 ROG STRIX WHITE Edition OC',
+      'Placa De Video AFOX RADEON R5 230',
+      'Placa De Video ZOTAC GEFORCE GTX 1660 SUPER',
+      'Placa De Video ASROCK RADEON RX 6700 XT CHALLENGER',
+      'Placa De Video ASROCK RADEON RX 6800'
+    ]
+  },
+  Shoptime: {
+    mouses: [ 'Mouse Jogo Notebook Pc Gamer', 'Mouse Multilaser MO221' ],
+    keyboards: [],
+    headsets: [],
+    graphicsCard: []
+  },
+  AliExpress: {
+    mouses: [],
+    keyboards: [],
+    headsets: [ 'Headset Headband 3.5 mm Wired' ],
+    graphicsCard: []
+  }
+}
+
+describe("Exercício 9 Função createStore", () => {
+  it("verifica se a função createStore() retorna um objetos com o nome de todas as lojas e seus respectivos produtos, separados por tipo do produto contendo um array com o nome de cada produto", () => {
+    expect(createStore()).toEqual(objTeste);
   });
 });
