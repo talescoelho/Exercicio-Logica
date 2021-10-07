@@ -7,7 +7,7 @@ const produtos = require('./produtos');
 //  lowerstPrice: MENOR_PREÇO_DO_ARRAY
 // }
 function findColor() {
-  
+
 }
 
 module.exports = findColor;

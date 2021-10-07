@@ -9,7 +9,7 @@ const produtos = require('./produtos');
 // }
 // PREÇO_MÉDIO tem que ter até 2 casas decimais
 function averagePrice() {
-  
+
 }
 
 module.exports = averagePrice;

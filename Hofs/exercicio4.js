@@ -5,6 +5,7 @@ const produtos = require('./produtos');
 // o preço máximo e o preço mínimo maior que o número informado
 // caso não exista, retornar um array vazio
 function differenceBetweenMaxAndMinPrice() {
+
 } 
 
 module.exports = differenceBetweenMaxAndMinPrice;

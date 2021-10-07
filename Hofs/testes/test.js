@@ -36,7 +36,7 @@ describe("Exercício 1 Função getAllProductsFromStore", () => {
   it("verifica se a função getAllProductsFromStore('Kalunga') retorna um array com os produtos da loja Kalunga", () => {
     expect(getAllProductsFromStore("Kalunga")).toEqual([
       'Mouse Gamer Logitech G203 Rgb Lightsync',
-      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Gamer Silencioso Ergonômico',
       'Mouse Logitech M170',
       'Mouse Gamer 3200dpi MO273-Multilaser',
       'Fone de Ouvido Gamer Headset Multilaser PH073',
@@ -168,16 +168,16 @@ describe("Exercício 6 Função verifyId", () => {
   });
   it("verifica se a função verifyId('M004') retorna um objeto com os dados do produto", () => {
     expect(verifyId("M004")).toEqual({
-      id: "M004",
-      name: "Mouse Logitech M170",
-      brand: "Logitech",
-      dpi: 1.000,
-      color: ["black", "white", "red"],
+      id: 'M004',
+      name: 'Mouse Logitech M170',
+      brand: 'Logitech',
+      dpi: 1,
+      color: [ 'black', 'white', 'red' ],
       bluetooth: true,
       buttons: 3,
-      stores: ["Shopee", "Kabum!", "Kalunga"],
-      prices: [10.10, 69.90, 69.90],
-    },);
+      stores: [ 'Shopee', 'KaBuM!', 'Kalunga' ],
+      prices: [ 10.1, 69.9, 69.9 ]
+    });
   });
 });
 
@@ -480,7 +480,7 @@ describe("Exercício 9 Função createStore", () => {
     expect(createStore("xabloja", "headsets")).toEqual(objTeste);
   });
   it("verifica se a função createStore('Terabyteshop', 'xaproduto') com o produto inexistente retorna todos os itens da loja", () => {
-    expect(createStore("xabloja", "headsets")).toEqual({
+    expect(createStore("Terabyteshop", "xaproduto")).toEqual({
       mouses: [
         'Mouse Gamer Cobra Chroma M711 Rgb Redragon',
         'Mouse Gamer Logitech G203 Rgb Lightsync'

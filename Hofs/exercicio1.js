@@ -7,5 +7,4 @@ function getAllProductsFromStore() {
   
 }
 
-
 module.exports = getAllProductsFromStore;

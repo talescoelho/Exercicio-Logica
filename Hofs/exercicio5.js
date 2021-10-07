@@ -4,6 +4,7 @@ const produtos = require('./produtos');
 // um array com o nome de todos os produtos daquela loja. se não houver nem um produto retornar um array
 // vazio
 function verifyStore() {
+  
 }
 
 module.exports = verifyStore;
