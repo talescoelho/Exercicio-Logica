@@ -24,7 +24,7 @@ const produtos = {
     },
     {
       id: "M003",
-      name: "Mouse Gamer Logitech G203 Rgb Lightsync",
+      name: "Mouse Gamer Silencioso Ergonômico",
       brand: "Logitech",
       dpi: 1.000,
       color: ["black", "white"],

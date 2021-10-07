@@ -246,7 +246,7 @@ const objTeste = {
     mouses: [
       'Mouse Gamer Cobra Chroma M711 Rgb Redragon',
       'Mouse Gamer Logitech G203 Rgb Lightsync',
-      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Gamer Silencioso Ergonômico',
       'Mouse Gamer 3200dpi MO273-Multilaser',
       'Mouse Logitech Mx Master 3'
     ],
@@ -322,7 +322,7 @@ const objTeste = {
   Kalunga: {
     mouses: [
       'Mouse Gamer Logitech G203 Rgb Lightsync',
-      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Gamer Silencioso Ergonômico',
       'Mouse Logitech M170',
       'Mouse Gamer 3200dpi MO273-Multilaser'
     ],
@@ -337,10 +337,7 @@ const objTeste = {
     graphicsCard: []
   },
   Shopee: {
-    mouses: [
-      'Mouse Gamer Logitech G203 Rgb Lightsync',
-      'Mouse Logitech M170'
-    ],
+    mouses: [ 'Mouse Gamer Silencioso Ergonômico', 'Mouse Logitech M170' ],
     keyboards: [],
     headsets: [],
     graphicsCard: []
