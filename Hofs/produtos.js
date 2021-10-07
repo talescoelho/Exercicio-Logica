@@ -288,8 +288,8 @@ const produtos = {
     {
       id: "H010",
       name: "Headset M2 Cat 2021",
-      brand: "",
-      color: [""],
+      brand: null,
+      color: ["black", "white", "pink"],
       bluetooth: false,
       stores: ["Americanas", "Kalunga", "Submarino"],
       prices: [168.99, 150.45, 180.95],
