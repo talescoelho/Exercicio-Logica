@@ -1,7 +1,125 @@
+const getAllProductsFromStore = require('../exercicio1');
+const getAllBluetoothDevices = require('../exercicio2');
+const getMoreThan6GBGraphicsCard = require('../exercicio3');
+const differenceBetweenMaxAndMinPrice = require('../exercicio4');
 const verifyStore = require('../exercicio5');
 const verifyId = require('../exercicio6');
 const findColor = require('../exercicio7');
 const averagePrice = require('../exercicio8');
+
+describe("Exercício 1 Função getAllProductsFromStore", () => {
+  it("verifica se a função getAllProductsFromStore('Americanas') retorna array com os produtos da loja Americanas", () => {
+    expect(getAllProductsFromStore("Americanas")).toEqual([
+      'Mouse Jogo Notebook Pc Gamer',
+      'Mouse Multilaser MO221',
+      'Teclado Logitech K120, ABNT2',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Opto-Mecanico Redragon Infernal Dragon Viserion',
+      'Teclado Mecanico T-Dagger Bermudo',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Gamer Trust GXT 835 Azor',
+      'Headset Headband 3.5 mm Wired',
+      'Headphone Microfone Gm-019',
+      'Fone Ouvido Sem Fio Bluetooth Lc-840',
+      'Headset M2 Cat 2021',
+      'Placa De Video MSI GEFORCE RTX 3080 VENTUS 3X OC Edition',
+      'Placa De Video ASUS RADEON RX 6700 XT DUAL OC Edition',
+      'Placa De Video GIGABYTE GEFORCE RTX 2060 D6',
+      'Placa De Video ASUS GEFORCE RTX 3080 ROG STRIX WHITE Edition OC',
+      'Placa De Video AFOX RADEON R5 230',
+      'Placa De Video ZOTAC GEFORCE GTX 1660 SUPER',
+      'Placa De Video ASROCK RADEON RX 6700 XT CHALLENGER',
+      'Placa De Video ASROCK RADEON RX 6800'
+    ]);
+  });
+  it("verifica se a função getAllProductsFromStore('Kalunga') retorna um array com os produtos da loja Kalunga", () => {
+    expect(getAllProductsFromStore("Kalunga")).toEqual([
+      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Gamer Logitech G203 Rgb Lightsync',
+      'Mouse Logitech M170',
+      'Mouse Gamer 3200dpi MO273-Multilaser',
+      'Fone de Ouvido Gamer Headset Multilaser PH073',
+      'Fone de Ouvido Headset Gamer Blaze TGT-BLA-01',
+      'Fone Headset 5.0 Com Led Dobrável',
+      'Fone De Ouvido Headset Surround Bass Bluetooth',
+      'Headset M2 Cat 2021'
+    ]);
+  });
+  it("verifica se a função getAllProductsFromStore('K011') retorna um objetos os itens que contenham o id informado", () => {
+    expect(getAllProductsFromStore("K011")).toEqual([]);
+  });
+});
+
+describe("Exercício 2 Função getAllBluetoothDevices", () => {
+  it("verifica se a função getAllBluetoothDevices() retorna um array com o nome de todos os itens que contenham bluetoot", () => {
+    expect(getAllBluetoothDevices()).toEqual([
+      'Mouse Logitech M170',
+      'Mouse Logitech Mx Master 3',
+      'Mouse Jogo Notebook Pc Gamer',
+      'Mouse Multilaser MO221',
+      'Teclado Logitech K120, ABNT2',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Teclado Mecanico Gamer Redragon Daska, Rainbow',
+      'Teclado Mecanico T-Dagger Bermudo',
+      'Teclado Mecanico Gamer Corsair K60 PRO',
+      'Fone Ouvido Sem Fio Bluetooth Lc-840',
+      'Fone Headset 5.0 Com Led Dobrável',
+      'Fone De Ouvido Headset Surround Bass Bluetooth'
+    ]);
+  });
+});
+
+describe("Exercício 3 Função getMoreThan6GBGraphicsCard", () => {
+  it("verifica se a função getMoreThan6GBGraphicsCard() retorna array com as placas de vídeo com mais de 6GB de memória", () => {
+    expect(getMoreThan6GBGraphicsCard()).toEqual([
+      'Placa De Video MSI GEFORCE RTX 3080 VENTUS 3X OC Edition',
+      'Placa De Video ASUS RADEON RX 6700 XT DUAL OC Edition',
+      'Placa De Video ASUS GEFORCE RTX 3080 ROG STRIX WHITE Edition OC',
+      'Placa De Video ASROCK RADEON RX 6700 XT CHALLENGER',
+      'Placa De Video ASROCK RADEON RX 6800'
+    ]);
+  });
+});
+
+describe("Exercício 4 Função differenceBetweenMaxAndMinPrice", () => {
+  it("verifica se a função differenceBetweenMaxAndMinPrice(50) retorna um array com o nome de todos os itens que tenham o preço maior que o número informado", () => {
+    expect(differenceBetweenMaxAndMinPrice(50)).toEqual([
+      'Mouse Logitech M170',
+      'Mouse Logitech Mx Master 3',
+      'Headset Gamer Hyperx Cloud Stinger Core',
+      'Headset Headband 3.5 mm Wired',
+      'Placa De Video MSI GEFORCE RTX 3080 VENTUS 3X OC Edition',
+      'Placa De Video ASUS RADEON RX 6700 XT DUAL OC Edition',
+      'Placa De Video MANCER RADEON RX 560',
+      'Placa De Video GIGABYTE GEFORCE RTX 2060 D6',
+      'Placa De Video ASUS GEFORCE RTX 3080 ROG STRIX WHITE Edition OC',
+      'Placa De Video ZOTAC GEFORCE GTX 1660 SUPER',
+      'Placa De Video ASROCK RADEON RX 6700 XT CHALLENGER',
+      'Placa De Video ASROCK RADEON RX 6800',
+      'Placa De Video PNY GEFORCE GTX 970'
+    ]);
+  });
+  it("verifica se a função differenceBetweenMaxAndMinPrice(100) retorna um array com o nome de todos os itens que tenham o preço maior que o número informado", () => {
+    expect(differenceBetweenMaxAndMinPrice(100)).toEqual([
+      'Headset Gamer Hyperx Cloud Stinger Core',
+      'Placa De Video MSI GEFORCE RTX 3080 VENTUS 3X OC Edition',
+      'Placa De Video ASUS RADEON RX 6700 XT DUAL OC Edition',
+      'Placa De Video MANCER RADEON RX 560',
+      'Placa De Video GIGABYTE GEFORCE RTX 2060 D6',
+      'Placa De Video ASUS GEFORCE RTX 3080 ROG STRIX WHITE Edition OC',
+      'Placa De Video ZOTAC GEFORCE GTX 1660 SUPER',
+      'Placa De Video ASROCK RADEON RX 6700 XT CHALLENGER',
+      'Placa De Video ASROCK RADEON RX 6800',
+      'Placa De Video PNY GEFORCE GTX 970'
+    ]);
+  });
+  it("verifica se a função differenceBetweenMaxAndMinPrice(300) retorna um array com o nome de todos os itens que tenham o preço maior que o número informado", () => {
+    expect(differenceBetweenMaxAndMinPrice(300)).toEqual([ 'Placa De Video MSI GEFORCE RTX 3080 VENTUS 3X OC Edition' ]);
+  });
+  it("verifica se a função differenceBetweenMaxAndMinPrice(1000) retorna um array vazio", () => {
+    expect(differenceBetweenMaxAndMinPrice(1000)).toEqual([]);
+  });
+});
 
 describe("Exercício 5 Função verifyStore", () => {
   it("verifica se a função verifyStore('KaBuM!', 'keyboards') retorna um array com o nome de todos os teclados da Kabum!", () => {
