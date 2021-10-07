@@ -3,3 +3,5 @@
 function getAllProductsFromStore(store) {
 
 }
+
+module.exports = getAllProductsFromStore;
