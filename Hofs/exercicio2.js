@@ -3,3 +3,5 @@
 function getAllBluetoothDevices() {
   
 }
+
+module.exports = nomeFrutas;
