@@ -203,7 +203,7 @@ const produtos = {
       prices: [34.90, 40.00, 43.99],
     },
   ],
-  headset: [
+  headsets: [
     {
       id: "H001",
       name: "Headset Gamer Hyperx Cloud Stinger Core",

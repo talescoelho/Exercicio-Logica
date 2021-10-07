@@ -1,0 +1,16 @@
+{
+  "name": "Hofs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicio1.js",
+  "dependencies": {
+    "jest": "^27.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
