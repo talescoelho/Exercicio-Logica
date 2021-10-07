@@ -41,7 +41,7 @@ const produtos = {
       color: ["black", "white", "red"],
       bluetooth: true,
       buttons: 3,
-      stores: ["Shopee", "Kabum!", "Kalunga"],
+      stores: ["Shopee", "KaBuM!", "Kalunga"],
       prices: [10.10, 69.90, 69.90],
     },
     {

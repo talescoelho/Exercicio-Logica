@@ -247,6 +247,7 @@ const objTeste = {
       'Mouse Gamer Cobra Chroma M711 Rgb Redragon',
       'Mouse Gamer Logitech G203 Rgb Lightsync',
       'Mouse Gamer Silencioso Ergonômico',
+      'Mouse Logitech M170',
       'Mouse Gamer 3200dpi MO273-Multilaser',
       'Mouse Logitech Mx Master 3'
     ],
@@ -338,12 +339,6 @@ const objTeste = {
   },
   Shopee: {
     mouses: [ 'Mouse Gamer Silencioso Ergonômico', 'Mouse Logitech M170' ],
-    keyboards: [],
-    headsets: [],
-    graphicsCard: []
-  },
-  'Kabum!': {
-    mouses: [ 'Mouse Logitech M170' ],
     keyboards: [],
     headsets: [],
     graphicsCard: []
@@ -457,5 +452,46 @@ const objTeste = {
 describe("Exercício 9 Função createStore", () => {
   it("verifica se a função createStore() retorna um objetos com o nome de todas as lojas e seus respectivos produtos, separados por tipo do produto contendo um array com o nome de cada produto", () => {
     expect(createStore()).toEqual(objTeste);
+  });
+  it("verifica se a função createStore('Terabyteshop') retorna a loja com todos os seus produtos", () => {
+    expect(createStore("Terabyteshop")).toEqual({
+      mouses: [
+        'Mouse Gamer Cobra Chroma M711 Rgb Redragon',
+        'Mouse Gamer Logitech G203 Rgb Lightsync'
+      ],
+      keyboards: [],
+      headsets: [
+        'Headset Gamer Hyperx Cloud Stinger Core',
+        'Headset Gamer Scylla Redragon H901',
+        'Headset Headband 3.5 mm Wired'
+      ],
+      graphicsCard: []
+    });
+  });
+  it("verifica se a função createStore('Terabyteshop', 'headsets') retorna um array com o nome de todos os produtos que a loja contem", () => {
+    expect(createStore("Terabyteshop", "headsets")).toEqual([
+      'Headset Gamer Hyperx Cloud Stinger Core',
+      'Headset Gamer Scylla Redragon H901',
+      'Headset Headband 3.5 mm Wired'
+    ]
+    );
+  });
+  it("verifica se a função createStore('xabloja', 'headsets') com uma loja que não existe retorna o array inteiro", () => {
+    expect(createStore("xabloja", "headsets")).toEqual(objTeste);
+  });
+  it("verifica se a função createStore('Terabyteshop', 'xaproduto') com o produto inexistente retorna todos os itens da loja", () => {
+    expect(createStore("xabloja", "headsets")).toEqual({
+      mouses: [
+        'Mouse Gamer Cobra Chroma M711 Rgb Redragon',
+        'Mouse Gamer Logitech G203 Rgb Lightsync'
+      ],
+      keyboards: [],
+      headsets: [
+        'Headset Gamer Hyperx Cloud Stinger Core',
+        'Headset Gamer Scylla Redragon H901',
+        'Headset Headband 3.5 mm Wired'
+      ],
+      graphicsCard: []
+    });
   });
 });
