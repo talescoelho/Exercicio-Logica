@@ -128,7 +128,7 @@ describe("Exercício 7 Função maisBarata()", () => {
 
 describe("Exercício 8 Função buscaValorNutritivo()", () => {
   it("verifica se a função buscaValorNutritivo retorna uma lista com o nome das frutas que tem o valor nutritivo informado", () => {
-    expect(buscaValorNutritivo("C")).toEqual(["Maracujá", "Laranja", "Mamão", "Maçã", "Limão"]);
+    expect(buscaValorNutritivo("C")).toEqual(["Maracujá", "Manga", "Laranja", "Mamão", "Maçã", "Limão"]);
     expect(buscaValorNutritivo("B")).toEqual(["Manga", "Laranja"]);
     expect(buscaValorNutritivo("A")).toEqual(["Manga", "Laranja", "Banana", "Mamão"]);
     expect(buscaValorNutritivo("B1")).toEqual(["Banana"]);
@@ -136,7 +136,7 @@ describe("Exercício 8 Função buscaValorNutritivo()", () => {
   });
 });
 
-describe("Exercício 8 Função buscaPorMesPredominante()", () => {
+describe("Exercício 9 Função buscaPorMesPredominante()", () => {
   it("verifica se a função buscaPorMesPredominante recebe o mes como valor e retorna uma lista com todos os nomes das frutas que esse mês aparece no campo predominante", () => {
     expect(buscaPorMesPredominante("JAN")).toEqual(["Maracujá", "Manga", "Banana", "Mamão", "Limão"]);
     expect(buscaPorMesPredominante("FEV")).toEqual(["Maracujá", "Manga", "Banana", "Mamão", "Maçã"]);
