@@ -495,3 +495,28 @@ describe("Exercício 9 Função createStore", () => {
     });
   });
 });
+
+describe("Exercício 10 Função priceProductForStore", () => {
+  it("verifica se a função priceProductForStore('mouses', 'M001') retorna um objeto com os itens informados", () => {
+    expect(priceProductForStore("mouses", "M001")).toEqual({
+      id: "M001",
+      name: "Mouse Gamer Cobra Chroma M711 Rgb Redragon",
+      brand: "Redragon",
+      dpi: 10.000,
+      color: ["black", "white"],
+      bluetooth: false,
+      buttons: 8,
+      priceProductForStore: {"KaBuM!": 114.90, Terabyteshop: 116.90, Pichau: 129.90},
+    });
+  });
+  it("verifica se a função priceProductForStore('mouses', 'M001') retorna um objeto com os itens informados", () => {
+    expect(priceProductForStore("headsets", "H008")).toEqual({
+      id: "H008",
+      name: "Fone Headset 5.0 Com Led Dobrável",
+      brand: null,
+      color: ["white"],
+      bluetooth: true,
+      priceProductForStore: {"Mercado Livre": 109.90, Submarino: 99.99, Kalunga: 108.40},
+    });
+  });
+});
